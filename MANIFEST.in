@@ -1,0 +1,1 @@
+include xena_rfc_converter/converters/segment_refs/*.json
