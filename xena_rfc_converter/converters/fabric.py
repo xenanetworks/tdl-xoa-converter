@@ -1,5 +1,5 @@
 from typing import Any, Type, Protocol, Dict
-from . import exceptions
+from xena_rfc_converter import exceptions
 from xena_rfc_converter import types
 from .rfc2544.adapter import Converter2544
 from .rfc3918.adapter import Converter3918
