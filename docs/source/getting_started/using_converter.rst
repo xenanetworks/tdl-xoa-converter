@@ -43,8 +43,6 @@ Step 3. Install Xena Python RFC Core
 
 If you have already installed Xena Python RFC Core in your system, either to your global namespace or in a virtual environment, you can skip this step.
 
-Read more about `` 
-
 
 Step 4. Copy Xena Python RFC Test Suite Plugin into Project Folder
 -------------------------------------------------------------------

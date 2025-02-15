@@ -36,7 +36,6 @@ If you don't have ``pip`` installed, you can:
 * Open a terminal/command prompt, ``cd`` to the folder containing the ``get-pip.py`` file and run:
 
 .. code-block:: console
-    :caption: Install pip in macOS/Linux environment.
 
     $ python3 get-pip.py
 
@@ -56,7 +55,6 @@ Install
 ``pip`` is the recommended installer for Xena Python RFC Converter. The most common usage of ``pip`` is to install from the `Python Package Index <https://pypi.org/>`_ using `Requirement Specifiers <https://pip.pypa.io/en/stable/cli/pip_install/#requirement-specifiers>`_.
 
 .. code-block:: console
-    :caption: Install Xena Python RFC Converter in macOS/Linux environment from PyPi.
 
     $ pip install xena-rfc-converter         # latest version
     $ pip install xena-rfc-converter==1.0.1     # specific version
@@ -68,7 +66,6 @@ Upgrade
 To upgrade Xena Python RFC Converter package from PyPI:
 
 .. code-block:: console
-    :caption: Upgrade Xena Python RFC Converter in macOS/Linux environment from PyPi.
 
     $ pip install xena-rfc-converter -U
 
@@ -80,7 +77,6 @@ To uninstall Xena Python RFC Converter using ``pip``:
 
 
 .. code-block:: console
-    :caption: Uninstall Xena Python RFC Converter in macOS/Linux environment.
 
     $ pip uninstall xena-rfc-converter
 
@@ -102,14 +98,12 @@ First, make sure Python packages `wheel <https://wheel.readthedocs.io/en/stable/
 
 
 .. code-block:: console
-    :caption: Install ``wheel`` and ``setuptools`` in macOS/Linux environment.
 
     $ pip install wheel setuptools
 
 Then, download the Xena Python RFC Converter source distribution from `Xena Python RFC Converter Releases <https://github.com/xenanetworks/xena-python-rfc-converter/releases>`_. Unzip the archive and run the ``setup.py`` script to install the package:
 
 .. code-block:: console
-    :caption: Install Xena Python RFC Converter in macOS/Linux environment from source.
 
     $ python3 setup.py install
 
@@ -117,6 +111,5 @@ Then, download the Xena Python RFC Converter source distribution from `Xena Pyth
 If you want to distribute, you can build ``.whl`` file for distribution from the source:
 
 .. code-block:: console
-    :caption: Build Xena Python RFC Converter wheel in macOS/Linux environment for distribution.
 
     $ python3 setup.py bdist_wheel
