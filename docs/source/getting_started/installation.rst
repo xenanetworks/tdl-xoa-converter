@@ -35,19 +35,10 @@ If you don't have ``pip`` installed, you can:
 * Download the script, from https://bootstrap.pypa.io/get-pip.py.
 * Open a terminal/command prompt, ``cd`` to the folder containing the ``get-pip.py`` file and run:
 
-.. tab:: Windows
+.. code-block:: console
+    :caption: Install pip in macOS/Linux environment.
 
-    .. code-block:: doscon
-        :caption: Install pip in Windows environment.
-
-        > py get-pip.py
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Install pip in macOS/Linux environment.
-
-        $ python3 get-pip.py
+    $ python3 get-pip.py
 
 .. seealso::
 
@@ -64,44 +55,22 @@ Install
 
 ``pip`` is the recommended installer for Xena Python RFC Converter. The most common usage of ``pip`` is to install from the `Python Package Index <https://pypi.org/>`_ using `Requirement Specifiers <https://pip.pypa.io/en/stable/cli/pip_install/#requirement-specifiers>`_.
 
-.. tab:: Windows
-    :new-set:
+.. code-block:: console
+    :caption: Install Xena Python RFC Converter in macOS/Linux environment from PyPi.
 
-    .. code-block:: doscon
-        :caption: Install Xena Python RFC Converter in Windows environment from PyPi.
-
-        > pip install xena-rfc-converter         # latest version
-        > pip install xena-rfc-converter==1.0.1     # specific version
-        > pip install xena-rfc-converter>=1.0.1     # minimum version
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Install Xena Python RFC Converter in macOS/Linux environment from PyPi.
-
-        $ pip install xena-rfc-converter         # latest version
-        $ pip install xena-rfc-converter==1.0.1     # specific version
-        $ pip install xena-rfc-converter>=1.0.1     # minimum version
+    $ pip install xena-rfc-converter         # latest version
+    $ pip install xena-rfc-converter==1.0.1     # specific version
+    $ pip install xena-rfc-converter>=1.0.1     # minimum version
 
 Upgrade
 ^^^^^^^^
 
 To upgrade Xena Python RFC Converter package from PyPI:
 
-.. tab:: Windows
-    :new-set:
-    
-    .. code-block:: doscon
-        :caption: Upgrade Xena Python RFC Converter in Windows environment from PyPi.
+.. code-block:: console
+    :caption: Upgrade Xena Python RFC Converter in macOS/Linux environment from PyPi.
 
-        > pip install xena-rfc-converter --upgrade
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Upgrade Xena Python RFC Converter in macOS/Linux environment from PyPi.
-
-        $ pip install xena-rfc-converter --upgrade
+    $ pip install xena-rfc-converter -U
 
 
 Uninstall
@@ -109,20 +78,11 @@ Uninstall
 
 To uninstall Xena Python RFC Converter using ``pip``:
 
-.. tab:: Windows
-    :new-set:
 
-    .. code-block:: doscon
-        :caption: Uninstall Xena Python RFC Converter in Windows environment.
+.. code-block:: console
+    :caption: Uninstall Xena Python RFC Converter in macOS/Linux environment.
 
-        > pip uninstall xena-rfc-converter
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Uninstall Xena Python RFC Converter in macOS/Linux environment.
-
-        $ pip uninstall xena-rfc-converter
+    $ pip uninstall xena-rfc-converter
 
 .. seealso::
 
@@ -140,52 +100,23 @@ If for some reason you need to install or upgrade Xena Python RFC Converter manu
 
 First, make sure Python packages `wheel <https://wheel.readthedocs.io/en/stable/>`_ and  `setuptools <https://setuptools.pypa.io/en/latest/index.html>`_ are installed on your system. Install ``wheel`` and ``setuptools`` using ``pip``:
 
-.. tab:: Windows
-    :new-set:
 
-    .. code-block:: doscon
-        :caption: Install ``wheel`` and ``setuptools`` in Windows environment.
+.. code-block:: console
+    :caption: Install ``wheel`` and ``setuptools`` in macOS/Linux environment.
 
-        > pip install wheel setuptools
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Install ``wheel`` and ``setuptools`` in macOS/Linux environment.
-
-        $ pip install wheel setuptools
+    $ pip install wheel setuptools
 
 Then, download the Xena Python RFC Converter source distribution from `Xena Python RFC Converter Releases <https://github.com/xenanetworks/xena-python-rfc-converter/releases>`_. Unzip the archive and run the ``setup.py`` script to install the package:
 
-.. tab:: Windows
-    :new-set:
+.. code-block:: console
+    :caption: Install Xena Python RFC Converter in macOS/Linux environment from source.
 
-    .. code-block:: doscon
-        :caption: Install Xena Python RFC Converter in Windows environment from source.
-
-        > python setup.py install
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Install Xena Python RFC Converter in macOS/Linux environment from source.
-
-        $ python3 setup.py install
+    $ python3 setup.py install
 
 
 If you want to distribute, you can build ``.whl`` file for distribution from the source:
 
-.. tab:: Windows
-    :new-set:
+.. code-block:: console
+    :caption: Build Xena Python RFC Converter wheel in macOS/Linux environment for distribution.
 
-    .. code-block:: doscon
-        :caption: Build Xena Python RFC Converter wheel in Windows environment for distribution.
-
-        > python setup.py bdist_wheel
-
-.. tab:: macOS/Linux
-
-    .. code-block:: console
-        :caption: Build Xena Python RFC Converter wheel in macOS/Linux environment for distribution.
-
-        $ python3 setup.py bdist_wheel
+    $ python3 setup.py bdist_wheel
