@@ -1,8 +1,8 @@
 import setuptools
 
 def main():
-    with open("README.rst", "r", encoding="utf-8") as fh:
-        long_description = fh.read()
+    with open("README.md", encoding="utf-8") as f:
+        long_description = f.read()
 
     setuptools.setup(
         name="xena-rfc-converter",
@@ -27,6 +27,7 @@ def main():
             "Programming Language :: Python :: 3.10",
             "Programming Language :: Python :: 3.11",
             "Programming Language :: Python :: 3.12",
+            "Programming Language :: Python :: 3.13",
         ],
         python_requires=">=3.8.9",
         include_package_data=True,
