@@ -1,8 +1,8 @@
 import asyncio
 import json
-from xena_rfc_core import controller
-from xena_rfc_converter.entry import converter
-from xena_rfc_converter.types import TestSuiteType
+from xoa_rfc_core import controller
+from xoa_converter.entry import converter
+from xoa_converter.types import TestSuiteType
 
 # source config file to be converted
 OLD_CONFIG_FILE = "my_old2544_config.v2544" 
@@ -12,7 +12,7 @@ PLUGINS_PATH =  "pluginlib"
 
 async def start():
 
-    # create an instance of xena python rfc core controller
+    # create an instance of XOA rfc core controller
     c = await controller.MainController()
 
     # open and read xena test config my_old2544_config.v2544

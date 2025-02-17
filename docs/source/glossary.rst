@@ -30,7 +30,7 @@ Glossary of Terms
         Xena OpenAutomation
 
 
-    Xena Python RFC Core
-        `Xena Python RFC Core <https://github.com/xenanetworks/xena-python-rfc-core>`_ is the Xena Python RFC test suite framework to host different Xena Python RFC Test Suites as its plugins. 
+    XOA RFC Core
+        `XOA RFC Core <https://github.com/xenanetworks/xena-python-rfc-core>`_ is the XOA RFC test suite framework to host different XOA RFC Test Suites as its plugins. 
 
 
