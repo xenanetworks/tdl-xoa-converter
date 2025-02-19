@@ -1,27 +1,27 @@
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/xoa-rfc-converter) [![PyPI](https://img.shields.io/pypi/v/xoa-rfc-converter)](https://pypi.python.org/pypi/xoa-rfc-converter) ![GitHub](https://img.shields.io/github/license/xenanetworks/xoa-rfc-converter) [![Documentation Status](https://readthedocs.com/projects/xena-networks-xoa-rfc-converter/badge/?version=latest)](https://docs.xenanetworks.com/projects/xoa-rfc-converter/en/latest/?badge=latest)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tdl-xoa-converter) [![PyPI](https://img.shields.io/pypi/v/tdl-xoa-converter)](https://pypi.python.org/pypi/tdl-xoa-converter) ![GitHub](https://img.shields.io/github/license/xenanetworks/tdl-xoa-converter) [![Documentation Status](https://readthedocs.com/projects/xena-networks-tdl-xoa-converter/badge/?version=latest)](https://docs.xenanetworks.com/projects/tdl-xoa-converter/en/latest/?badge=latest)
 
-# XOA RFC Converter
+# XOA Converter
 
-XOA RFC Converter is a supporting tool for you to quickly migrate your Xena Windows desktop RFC test suite configurations into XOA RFC.
+XOA Converter is a supporting tool for you to quickly migrate your Xena Windows desktop RFC test suite configurations into XOA RFC.
 
 ## Introduction
 
-The XOA RFC Converter is an open-source tool hosted on Xena Networks' GitHub repository. It is designed to help you migrate your Xena Windows desktop RFC test suite configurations into XOA RFC, enabling a seamless transition to the XOA RFC ecosystem for network automation and testing.
+The XOA Converter is an open-source tool hosted on Xena Networks' GitHub repository. It is designed to help you migrate your Xena Windows desktop RFC test suite configurations into XOA RFC test suites, enabling a seamless transition to the XOA RFC ecosystem for network automation and testing.
 
-Key features of the XOA RFC Converter include:
+Key features of the XOA Converter include:
 
 1. Conversion support: The tool supports conversion of Valkyrie test suite configuration files to XOA RFC-compatible format, facilitating the integration of existing test cases into the XOA RFC framework.
 
-2. Ease of use: The XOA RFC Converter is designed to be user-friendly, with a straightforward process for converting test suite configuration files.
+2. Ease of use: The XOA Converter is designed to be user-friendly, with a straightforward process for converting test suite configuration files.
 
 3. Compatibility: The converter ensures that the migrated test suite configurations are compatible with XOA RFC Core and can be executed within the XOA RFC ecosystem.
 
-> The purpose of XOA RFC Converter is ONLY to convert Xena Windows desktop test suite RFC configuration files into XOA RFC configuration files. Thus only four test suite types are supported by XOA RFC Converter as the source config files. 
+> The purpose of XOA Converter is ONLY to convert Xena Windows desktop test suite RFC configuration files into XOA RFC configuration files. Thus only four test suite types are supported by XOA Converter as the source config files. 
 
 # Documentation
 
 The user documentation is hosted:
-[XOA RFC Converter Documentation](https://docs.xenanetworks.com/projects/xoa-rfc-converter)
+[XOA Converter Documentation](https://docs.xenanetworks.com/projects/tdl-xoa-converter)
 
 
 # Installation
@@ -33,7 +33,7 @@ Make sure Python ``pip`` is installed on you system. If you are using virtualenv
 To install/upgrade:
 
 ``` shell
-pip install xoa-rfc-converter -U
+pip install tdl-xoa-converter -U
 ```
 
 ## Install From Source Code
@@ -62,12 +62,12 @@ python setup.py bdist_wheel
 
 ## Quick Start
 
-Here is a quick start guide to get you started with XOA RFC Converter:
+Here is a quick start guide to get you started with XOA Converter:
 
-Install the latest version of XOA RFC Converter using pip:
+Install the latest version of XOA Converter using pip:
 
 ``` shell
-pip install xoa-rfc-converter -U
+pip install tdl-xoa-converter -U
 ```
 
 Code example to convert `.x2544` into XOA RFC 2544 test configuration:
@@ -75,9 +75,9 @@ Code example to convert `.x2544` into XOA RFC 2544 test configuration:
 ``` python
 import asyncio
 import json
-from xena_rfc_core import controller
-from xoa_rfc_converter.entry import converter
-from xoa_rfc_converter.types import TestSuiteType
+from xoa_core import controller
+from xoa_converter.entry import converter
+from xoa_converter.types import TestSuiteType
 
 async def start():
     SOURCE_CONFIG_FILE = "my_old2544_config.x2544" # source config file to be converted

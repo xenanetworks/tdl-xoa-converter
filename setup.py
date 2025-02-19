@@ -5,18 +5,18 @@ def main():
         long_description = f.read()
 
     setuptools.setup(
-        name="xoa-rfc-converter",
-        description="XOA RFC Converter is a library for converting Xena's Windows desktop RFC test configurations to XOA RFC test configurations.",
+        name="tdl-xoa-converter",
+        description="XOA Converter is a library for converting Xena's Windows desktop RFC test configurations to XOA RFC test configurations.",
         long_description=long_description,
         long_description_content_type="text/markdown",
         author="Leonard Yu",
         author_email="leonard.yu@teledyne.com",
         maintainer="Teledyne LeCroy Xena",
         maintainer_email="support@xenanetworks.com",
-        url="https://github.com/xenanetworks/xoa-rfc-converter",
+        url="https://github.com/xenanetworks/tdl-xoa-converter",
         packages=setuptools.find_packages(),
         license='Apache 2.0',
-        install_requires=["pydantic>=1.8.2", "datamodel-code-generator", "xoa-api"],
+        install_requires=["pydantic>=1.8.2", "datamodel-code-generator", "tdl-xoa-driver"],
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Intended Audience :: Developers",

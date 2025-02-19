@@ -1,6 +1,6 @@
 import asyncio
 import json
-from xoa_rfc_core import controller
+from xoa_core import controller
 from xoa_converter.entry import converter
 from xoa_converter.types import TestSuiteType
 

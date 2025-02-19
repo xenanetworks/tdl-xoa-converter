@@ -1,4 +1,4 @@
-Convert GUI Test Config into XOA RFC
+Convert GUI Test Config into XOA
 ======================================================
 
 To converter Xena RFC GUI test configuration files into XOA RFC json format, you need to do the following steps.
@@ -7,7 +7,7 @@ To converter Xena RFC GUI test configuration files into XOA RFC json format, you
 Step 1. Create Project Folder
 ------------------------------
 
-First, create a folder on your computer at a location you want. This folder will be the place where you keep your XOA RFC test suites and a simple Python program to load and run them using XOA RFC Core framework.
+First, create a folder on your computer at a location you want. This folder will be the place where you keep your XOA RFC test suites and a simple Python program to load and run them using XOA RFC test framework.
 
 Let's create a folder called ``/my_xoa_project``
 
@@ -66,13 +66,13 @@ Copy your test configuration ``json`` file, e.g. ``my2544_data.json`` into ``/my
 Step 5. Convert Test Config from Xena to XOA RFC
 ---------------------------------------------------------
 
-First, import ``xena-rfc-core`` and ``xena-rfc-converter`` into your Python code. If you haven't installed ``xena-rfc-core`` Python package in your environment, please go to `XOA RFC Core <https://github.com/xenanetworks/xena-python-rfc-core>`_.
+First, import ``xoa_core`` and ``xoa_converter`` into your Python code.
 
 .. code-block:: python
 
-    from xena-rfc-core import controller
-    from xena-rfc-converter.entry import converter
-    from xena-rfc-converter.types import TestSuiteType
+    from xoa_core import controller
+    from xoa_converter.entry import converter
+    from xoa_converter.types import TestSuiteType
 
 Then, to use the converter, you need the target schema for the old file to be converted into. After that, simply provide the target schema, the old config file to the converter function and get the new config file:
 

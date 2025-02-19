@@ -1,1 +1,1 @@
-include xoa_rfc_converter/converters/segment_refs/*.json
+include xoa_converter/converters/segment_refs/*.json

@@ -1,5 +1,5 @@
 from enum import Enum as CaseSensitiveEnum
-from xena_driver.enums import (
+from xoa_driver.enums import (
     BRRMode,
 )
 

@@ -45,17 +45,17 @@ def get_short_version(rel_path):
 company = f"Teledyne LeCroy Xena"
 year = datetime.datetime.today().year
 month = datetime.datetime.today().month
-project = f"XOA RFC Converter"
+project = f"XOA Converter"
 copyright = f"{year}, {company}"
 author = company
-title = f"XOA RFC Converter Documentation"
-output_basename = f"xoa_rfc_converter"
+title = f"XOA Converter Documentation"
+output_basename = f"tdl_xoa_converter"
 
 # The full version, including alpha/beta/rc tags.
-release = get_version("../../xoa_rfc_converter/__init__.py")
+release = get_version("../../xoa_converter/__init__.py")
 
 # The short X.Y version.
-version = get_short_version("../../xoa_rfc_converter/__init__.py")
+version = get_short_version("../../xoa_converter/__init__.py")
 
 
 # -- General configuration -----------------------------------------------------

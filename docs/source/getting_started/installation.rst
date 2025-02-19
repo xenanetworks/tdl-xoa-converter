@@ -1,7 +1,7 @@
-Installing XOA RFC Converter
+Installing XOA Converter
 =====================================
 
-XOA RFC Converter is available to install and upgrade via the `Python Package Index <https://pypi.org/>`_. Alternatively, you can also install and upgrade from the source file.
+XOA Converter is available to install and upgrade via the `Python Package Index <https://pypi.org/>`_. Alternatively, you can also install and upgrade from the source file.
 
 * If you prefer installing/upgrading/uninstalling automatically, go to Section `From PyPi Using pip`_.
 * If you prefer installing/upgrading manually, go to Section `Manually From Source`_.
@@ -9,16 +9,16 @@ XOA RFC Converter is available to install and upgrade via the `Python Package In
 Prerequisites
 -------------
 
-Before installing XOA RFC Converter, please make sure your environment has installed `Python <https://www.python.org/>`_ and ``pip``.
+Before installing XOA Converter, please make sure your environment has installed `Python <https://www.python.org/>`_ and ``pip``.
 
 Python
 ^^^^^^^
 
-XOA RFC Converter requires that you `install Python <https://realpython.com/installing-python/>`_  on your system.
+XOA Converter requires that you `install Python <https://realpython.com/installing-python/>`_ on your system.
 
 .. note:: 
 
-    XOA RFC Converter requires Python >= 3.8.
+    XOA Converter requires Python >= 3.8.
 
 ``pip``
 ^^^^^^^
@@ -52,33 +52,33 @@ From PyPi Using ``pip``
 Install
 ^^^^^^^^
 
-``pip`` is the recommended installer for XOA RFC Converter. The most common usage of ``pip`` is to install from the `Python Package Index <https://pypi.org/>`_ using `Requirement Specifiers <https://pip.pypa.io/en/stable/cli/pip_install/#requirement-specifiers>`_.
+``pip`` is the recommended installer for XOA Converter. The most common usage of ``pip`` is to install from the `Python Package Index <https://pypi.org/>`_ using `Requirement Specifiers <https://pip.pypa.io/en/stable/cli/pip_install/#requirement-specifiers>`_.
 
 .. code-block:: console
 
-    $ pip install xena-rfc-converter         # latest version
-    $ pip install xena-rfc-converter==1.0.1     # specific version
-    $ pip install xena-rfc-converter>=1.0.1     # minimum version
+    $ pip install tdl-xoa-converter         # latest version
+    $ pip install tdl-xoa-converter==1.0.1     # specific version
+    $ pip install tdl-xoa-converter>=1.0.1     # minimum version
 
 Upgrade
 ^^^^^^^^
 
-To upgrade XOA RFC Converter package from PyPI:
+To upgrade XOA Converter package from PyPI:
 
 .. code-block:: console
 
-    $ pip install xena-rfc-converter -U
+    $ pip install tdl-xoa-converter -U
 
 
 Uninstall
 ^^^^^^^^^^^
 
-To uninstall XOA RFC Converter using ``pip``:
+To uninstall XOA Converter using ``pip``:
 
 
 .. code-block:: console
 
-    $ pip uninstall xena-rfc-converter
+    $ pip uninstall tdl-xoa-converter
 
 .. seealso::
 
@@ -92,7 +92,7 @@ Manually From Source
 Install or Upgrade
 ^^^^^^^^^^^^^^^^^^^
 
-If for some reason you need to install or upgrade XOA RFC Converter manually from source, the steps are:
+If for some reason you need to install or upgrade XOA Converter manually from source, the steps are:
 
 First, make sure Python packages `wheel <https://wheel.readthedocs.io/en/stable/>`_ and  `setuptools <https://setuptools.pypa.io/en/latest/index.html>`_ are installed on your system. Install ``wheel`` and ``setuptools`` using ``pip``:
 
@@ -101,7 +101,7 @@ First, make sure Python packages `wheel <https://wheel.readthedocs.io/en/stable/
 
     $ pip install wheel setuptools
 
-Then, download the XOA RFC Converter source distribution from `XOA RFC Converter Releases <https://github.com/xenanetworks/xoa-rfc-converter/releases>`_. Unzip the archive and run the ``setup.py`` script to install the package:
+Then, download the XOA Converter source distribution from `XOA Converter Releases <https://github.com/xenanetworks/tdl-xoa-converter/releases>`_. Unzip the archive and run the ``setup.py`` script to install the package:
 
 .. code-block:: console
 

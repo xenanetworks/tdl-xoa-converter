@@ -12,7 +12,7 @@ from pydantic import BaseModel
 from pydantic.fields import Field
 
 if TYPE_CHECKING:
-    from xena_rfc_converter.converters.rfc2544.model import (
+    from xoa_converter.converters.rfc2544.model import (
         LegacyStreamProfileHandler as LegacyStreamProfile2544,
     )
     from types import ModuleType
