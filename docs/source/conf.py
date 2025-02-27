@@ -49,7 +49,7 @@ project = f"XOA Converter"
 copyright = f"{year}, {company}"
 author = company
 title = f"XOA Converter Documentation"
-output_basename = f"tdl_xoa_converter"
+output_basename = f"tdl_xoa_converter_doc"
 
 # The full version, including alpha/beta/rc tags.
 release = get_version("../../xoa_converter/__init__.py")
