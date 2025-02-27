@@ -1,8 +1,8 @@
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tdl-xoa-converter) [![PyPI](https://img.shields.io/pypi/v/tdl-xoa-converter)](https://pypi.python.org/pypi/tdl-xoa-converter) ![GitHub](https://img.shields.io/github/license/xenanetworks/tdl-xoa-converter) [![Documentation Status](https://readthedocs.com/projects/xena-networks-tdl-xoa-converter/badge/?version=latest)](https://docs.xenanetworks.com/projects/tdl-xoa-converter/en/latest/?badge=latest)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tdl-xoa-converter) [![PyPI](https://img.shields.io/pypi/v/tdl-xoa-converter)](https://pypi.python.org/pypi/tdl-xoa-converter) [![Documentation Status](https://readthedocs.com/projects/xena-networks-tdl-xoa-converter/badge/?version=latest)](https://docs.xenanetworks.com/projects/tdl-xoa-converter/en/latest/?badge=latest)
 
 # XOA Converter
 
-XOA Converter is a supporting tool for you to quickly migrate your Xena Windows desktop RFC test suite configurations into XOA RFC.
+XOA Converter is a supporting tool for you to quickly migrate your Xena Windows desktop RFC test suite configurations into XOA RFC test suite.
 
 ## Introduction
 
