@@ -6,7 +6,7 @@ XOA Converter is a supporting tool for you to quickly migrate your Xena Windows 
 
 ## Introduction
 
-The XOA Converter is an open-source tool hosted on Xena Networks' GitHub repository. It is designed to help you migrate your Xena Windows desktop RFC test suite configurations into XOA RFC test suites, enabling a seamless transition to the XOA RFC ecosystem for network automation and testing.
+The XOA Converter is designed to help you migrate your Xena Windows desktop RFC test suite configurations into XOA RFC test suites, enabling a seamless transition to the XOA RFC ecosystem for network automation and testing.
 
 Key features of the XOA Converter include:
 
