@@ -1,6 +1,6 @@
 import base64
-from typing import Dict, List
-from pydantic import BaseModel, Field, validator
+from typing import Dict, List, Annotated
+from pydantic import BaseModel, Field, field_validator
 
 
 class LegacyPortRef(BaseModel):
@@ -86,7 +86,7 @@ class LegacyHwModifiers(BaseModel):
     legacy_segment_id: str = Field(alias="SegmentId")
     legacy_field_name: str = Field(alias="FieldName")
 
-    @validator("legacy_mask")
+    @field_validator("legacy_mask")
     def decode_segment_value(cls, v):
         v = base64.b64decode(v)
         v = "".join([hex(int(i)).replace("0x", "").zfill(2) for i in bytearray(v)])

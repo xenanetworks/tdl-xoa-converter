@@ -8,8 +8,9 @@ from typing import (
     Set,
     TYPE_CHECKING,
 )
-from pydantic import BaseModel
+from pydantic import BaseModel, TypeAdapter
 from pydantic.fields import Field
+import json
 
 if TYPE_CHECKING:
     from xoa_converter.converters.rfc2544.model import (
@@ -54,7 +55,7 @@ class SegmentRef(BaseModel):
     name: str = Field(alias="Name")
     description: str = Field(alias="Description")
     segment_type: str = Field(alias="SegmentType")
-    checksum_offset: Optional[int] = Field(alias="ChecksumOffset")
+    checksum_offset: Optional[int] = Field(default=None, alias="ChecksumOffset")
     protocol_fields: List[LegacySegmentField] = Field(alias="ProtocolFields")
 
     def calc_field_position(self) -> None:
@@ -69,10 +70,10 @@ class SegmentRef(BaseModel):
 
 
 def load_segment_refs_json(segment_type_value: str) -> SegmentRef:
-    segment_ref = SegmentRef.parse_file(
-        SEGMENT_REFS_FOLDER / f"{segment_type_value}.json"
-    )
-    return segment_ref
+    with open(SEGMENT_REFS_FOLDER / f"{segment_type_value}.json") as json_file:
+        data = json.load(json_file)
+        segment_ref = SegmentRef.model_validate(data)
+        return segment_ref
 
 
 def convert_protocol_segments(
@@ -108,7 +109,7 @@ def convert_protocol_segments(
                         restart_for_each_port=hvr.reset_for_each_port,
                     )
 
-            segment_ref = load_segment_refs_json(hs.segment_type.value)
+            segment_ref = load_segment_refs_json(str(hs.segment_type.value))
             segment_value = bin(
                 int("1" + base64.b64decode(hs.segment_value).hex(), 16)
             )[3:]

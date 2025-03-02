@@ -1,9 +1,10 @@
-from typing import Dict, List
+from typing import Dict, List, Annotated
 from pydantic import (
     BaseModel,
     Field,
     NonNegativeInt,
-    validator,
+    field_validator,
+    ValidationInfo
 )
 from . import enums
 
@@ -64,11 +65,11 @@ class LegacyPortEntity(BaseModel):
     parent_id: str = Field(alias="ParentID")
     label: str = Field(alias="Label")
 
-    @validator("remote_loop_mac_address", "ip_gateway_mac_address")
-    def decode_mac_address(cls, v):
-        v = base64.b64decode(v)
-        v = "".join([hex(int(i)).replace("0x", "").zfill(2) for i in bytearray(v)])
-        return v
+    @field_validator("remote_loop_mac_address", "ip_gateway_mac_address")
+    def decode_mac_address(cls, value):
+        value = base64.b64decode(value)
+        value = "".join([hex(int(i)).replace("0x", "").zfill(2) for i in bytearray(value)])
+        return value
 
 
 class LegacyPortHandler(BaseModel):
@@ -97,22 +98,22 @@ import base64
 
 class LegacyHeaderSegments(BaseModel):
     segment_value: str = Field(alias="SegmentValue")
-    segment_type: enums.LegacySegmentType = Field(alias="SegmentType")
+    segment_type: Annotated[enums.LegacySegmentType, Field(validate_default=True)] = Field(alias="SegmentType")
     item_id: str = Field(alias="ItemID")
     parent_id: str = Field(alias="ParentID")
     label: str = Field(alias="Label")
 
-    @validator("segment_type", pre=True, always=True)
-    def validate_segment_type(cls, v, values):
-        if isinstance(v, str):
-            if v.lower().startswith("raw"):
+    @field_validator("segment_type", mode="before")
+    def validate_segment_type(cls, value, info: ValidationInfo):
+        if isinstance(value, str):
+            if value.lower().startswith("raw"):
                 return enums.LegacySegmentType(
-                    f"raw_{len(values['segment_value']) // 2}"
+                    f"raw_{len(info.data['segment_value']) // 2}"
                 )
             else:
-                return enums.LegacySegmentType(v)
+                return enums.LegacySegmentType(value)
         else:
-            return v
+            return value
 
 
 class LegacyPayloadDefinition(BaseModel):

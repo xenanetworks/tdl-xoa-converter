@@ -3,6 +3,7 @@ import hashlib
 from typing import Union, TYPE_CHECKING
 from .model import LegacyModel2544 as old_model
 from ..common import convert_protocol_segments
+import json
 
 if TYPE_CHECKING:
     from .model import (
@@ -24,7 +25,8 @@ def convert_base_mac_address(mac_address: str) -> str:
 class Converter2544:
     def __init__(self, source_config: str) -> None:
         self.id_map = {}
-        self.data = old_model.parse_raw(source_config)
+        data = json.loads(source_config)
+        self.data = old_model.model_validate(data)
 
     def __gen_frame_size(self) -> dict:
         packet_size = self.data.test_options.packet_sizes

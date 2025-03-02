@@ -16,11 +16,14 @@ if TYPE_CHECKING:
         LegacyPortEntity,
     )
 
+import json
+
 
 class Converter2889:
     def __init__(self, source_config: str) -> None:
         self.id_map = {}
-        self.data = old_model.parse_raw(source_config)
+        data = json.loads(source_config)
+        self.data = old_model.model_validate(data)
 
     def __gen_chassis_id_map(self) -> Dict[str, str]:
         chassis_id_map = {}
