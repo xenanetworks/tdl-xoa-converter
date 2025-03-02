@@ -1,7 +1,7 @@
 import base64
 from decimal import Decimal
-from typing import  List, Dict, Optional
-from pydantic import BaseModel, Field, validator
+from typing import  List, Dict, Optional, Annotated
+from pydantic import BaseModel, Field, field_validator, ValidationInfo
 from .const import (
     BRRModeStr,
     LatencyMode,
@@ -32,7 +32,7 @@ class NewRateSweepOptions(BaseModel):
     end_value: Decimal
     step_value: Decimal
 
-    @validator("start_value", "end_value", "step_value")
+    @field_validator("start_value", "end_value", "step_value")
     def to_decimal(cls, v):
         return Decimal(v)
 
@@ -41,7 +41,7 @@ class PortRoleConfig(BaseModel):
     role: PortGroup = Field(alias="Role")
     peer_port_id: str = Field(alias="PeerPortId")
 
-    @validator("role", pre=True)
+    @field_validator("role", mode="before")
     def _flexible_role(cls, v):
         if v == "TestPort":
             return PortGroup.TEST_PORT
@@ -312,7 +312,7 @@ class LegacyPortEntity(BaseModel):
     parent_id: str = Field(alias="ParentID")
     label: str = Field(alias="Label")
 
-    @validator("remote_loop_mac_address", "ip_gateway_mac_address")
+    @field_validator("remote_loop_mac_address", "ip_gateway_mac_address")
     def decode_mac_address(cls, v):
         v = base64.b64decode(v)
         v = "".join([hex(int(i)).replace("0x", "").zfill(2) for i in bytearray(v)])
@@ -334,7 +334,7 @@ class HwModifiers(BaseModel):
     segment_id: str = Field(alias="SegmentId")
     field_name: str = Field(alias="FieldName")
 
-    @validator("mask")
+    @field_validator("mask")
     def decode_segment_value(cls, v):
         v = base64.b64decode(v)
         v = "".join([hex(int(i)).replace("0x", "").zfill(2) for i in bytearray(v)])
@@ -353,12 +353,12 @@ class FieldValueRanges(BaseModel):
 
 class HeaderSegments(BaseModel):
     segment_value: str = Field(alias="SegmentValue")
-    segment_type: LegacySegmentType = Field(alias="SegmentType")
+    segment_type: Annotated[LegacySegmentType, Field(validate_default=True)] = Field(alias="SegmentType")
     item_id: str = Field(alias="ItemID")
     parent_id: str = Field(alias="ParentID")
     label: str = Field(alias="Label")
 
-    @validator("segment_type", pre=True, always=True)
+    @field_validator("segment_type", mode="before")
     def validate_segment_type(cls, v, values):
         if isinstance(v, str):
             if v.lower().startswith("raw"):

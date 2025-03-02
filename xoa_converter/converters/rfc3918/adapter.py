@@ -24,11 +24,12 @@ from .const_conv import (
 )
 from .field import MacAddress
 from .legacy import LegacyModel3918, LegacyPortEntity
-
+import json
 
 class Converter3918:
     def __init__(self, source_config: str) -> None:
-        self.data = LegacyModel3918.parse_raw(source_config)
+        data = json.loads(source_config)
+        self.data = LegacyModel3918.model_validate(data)
 
     def __gen_profile(self) -> dict:
         stream_profile_handler = self.data.legacy_stream_profile_handler
