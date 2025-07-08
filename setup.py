@@ -16,19 +16,18 @@ def main():
         url="https://github.com/xenanetworks/tdl-xoa-converter",
         packages=setuptools.find_packages(),
         license='Apache 2.0',
-        install_requires=["tdl-xoa-driver>=1.1.0", "pydantic>=2.0", "datamodel-code-generator", ],
+        install_requires=["tdl-xoa-driver>=1.3, <2", "pydantic>=2.0", "datamodel-code-generator", ],
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Intended Audience :: Developers",
             "Topic :: Software Development :: Libraries :: Python Modules",
             "License :: OSI Approved :: Apache Software License",
-            "Programming Language :: Python :: 3.9",
-            "Programming Language :: Python :: 3.10",
             "Programming Language :: Python :: 3.11",
             "Programming Language :: Python :: 3.12",
             "Programming Language :: Python :: 3.13",
+            "Programming Language :: Python :: 3.14",
         ],
-        python_requires=">=3.9",
+        python_requires=">=3.11",
         include_package_data=True,
     )
 
